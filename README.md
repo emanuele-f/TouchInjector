@@ -59,4 +59,3 @@ Although it is possible to connect the Nintendo Switch joycons to an android dev
 
 - [TouchMapper](https://github.com/Shyri/TouchMapper) - experimental input mapper, requires a MacOS PC.
 - [KeyMapper](https://github.com/sds100/KeyMapper) - a multi-purpose input mapper.
-- [Mantis](https://play.google.com/store/apps/details?id=app.mantispro.gamepad) - a complete software to gamepad input. Closed source.
