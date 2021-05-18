@@ -14,11 +14,9 @@ A common limitation across the APIs is that they require the [INJECT_EVENTS perm
 
 The `Instrumentation` API allows apps to easily inject touch events via the <a href="https://developer.android.com/reference/android/app/Instrumentation#sendPointerSync(android.view.MotionEvent)">sendPointerSync method</a>. It is as easy as building an object and calling its method:
 
-```
-
+```java
 Instrumentation instr = new Instrumentation()
 instr.sendPointerSync(motionEvent)
-
 ```
 
 *Note*: the `sendPointerSync` method cannot be called from the main thread.
@@ -31,7 +29,7 @@ Although looking very promising due to the lack of the `INJECT_EVENTS` permissio
 
 The accessibility service must be defined in the android manifest:
 
-```
+```xml
 <service android:name=".MyAccessibilityService"
          android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
      <intent-filter>
@@ -46,7 +44,7 @@ The accessibility service must be defined in the android manifest:
 
 The `xml/config_accessibilityservice.xml` contains:
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
     android:accessibilityFlags="flagRequestFilterKeyEvents|flagReportViewIds|flagDefault"
@@ -81,7 +79,7 @@ The `InputManger` is similar to the `Instrumentation` class as it allows to inje
 
 By using java reflection, it is possible to get a reference to this method and invoke it:
 
-```
+```java
 String methodName = "getInstance";
 im = (InputManager) InputManager.class.getDeclaredMethod(methodName)
   .invoke(null);
