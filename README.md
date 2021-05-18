@@ -10,7 +10,7 @@ Most settings are wired into the app and require changing its source code to be 
 
 Injecting input events to other apps is generally not allowed in android as it requires the [INJECT_EVENTS permission](https://github.com/aosp-mirror/platform_frameworks_base/blob/master/core/res/AndroidManifest.xml). This permission can only be granted to apps signed with a system signature, which can be hard to accomplish even on rooted devices.
 
-TouchInjector, on the other hand, takes advantage of the *adb* special permissions which allow it to inject events. By running a dedicated program via adb is ence possible to inject events and bypass the permission check.
+TouchInjector, on the other hand, takes advantage of the *adb* special permissions which allow it to inject events. By running a dedicated program via adb is ence possible to inject events and bypass the permission check. See [this detailed document](docs/inject_touch_events.md) for more details.
 
 ## Setup
 
